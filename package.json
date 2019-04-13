@@ -35,7 +35,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier",
+      "prettier --write",
+      "eslint \"**/*.js\"",
       "git add"
     ]
   }
