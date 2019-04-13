@@ -4,7 +4,7 @@
   "description": "A web app which shows how the restaurants in your area fare in respect to food hygiene.",
   "main": "index.js",
   "scripts": {
-    "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
+    "lint": "eslint \"**/*.js\""
   },
   "repository": {
     "type": "git",
@@ -36,7 +36,7 @@
   "lint-staged": {
     "*.js": [
       "prettier --write",
-      "eslint \"**/*.js\"",
+      "npm run lint",
       "git add"
     ]
   }
