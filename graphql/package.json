@@ -1,0 +1,25 @@
+{
+  "name": "restaurant-hygiene-graphql",
+  "version": "1.0.0",
+  "description": "The GraphQL layer for the restaurant hygiene front-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonatanhakatan/restaurant-hygiene.git"
+  },
+  "author": "Jonny Levy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yonatanhakatan/restaurant-hygiene/issues"
+  },
+  "homepage": "https://github.com/yonatanhakatan/restaurant-hygiene#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "express": "^4.16.4",
+    "graphql": "^14.2.1"
+  },
+  "devDependencies": {}
+}

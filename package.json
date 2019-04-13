@@ -1,0 +1,29 @@
+{
+  "name": "restaurant-hygiene",
+  "version": "1.0.0",
+  "description": "A web app which shows how the restaurants in your area fare in respect to food hygiene.",
+  "main": "index.js",
+  "scripts": {
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yonatanhakatan/restaurant-hygiene.git"
+  },
+  "author": "Jonny Levy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yonatanhakatan/restaurant-hygiene/issues"
+  },
+  "homepage": "https://github.com/yonatanhakatan/restaurant-hygiene#readme",
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-import": "^2.17.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "1.17.0"
+  }
+}
