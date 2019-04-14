@@ -17,9 +17,10 @@
   },
   "homepage": "https://github.com/yonatanhakatan/restaurant-hygiene#readme",
   "dependencies": {
-    "apollo-server-express": "^2.4.8",
-    "express": "^4.16.4",
-    "graphql": "^14.2.1"
+    "apollo-server-express": "2.4.8",
+    "express": "4.16.4",
+    "graphql": "14.2.1",
+    "merge-graphql-schemas": "1.5.8"
   },
   "devDependencies": {}
 }
