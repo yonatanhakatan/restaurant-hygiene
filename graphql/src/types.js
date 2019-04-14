@@ -1,6 +1,6 @@
 const { mergeTypes } = require("merge-graphql-schemas")
-const RatingsTypes = require("./ratings/types")
+const RestaurantsTypes = require("./restaurants/types")
 
-const types = mergeTypes([RatingsTypes])
+const types = mergeTypes([RestaurantsTypes])
 
 module.exports = types

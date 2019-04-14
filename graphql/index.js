@@ -3,12 +3,14 @@ const { ApolloServer } = require("apollo-server-express")
 
 const typeDefs = require("./src/types")
 const resolvers = require("./src/resolvers")
+const dataSources = require("./src/dataSources")
 
 const port = 4000
 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  dataSources,
   playground: {
     settings: {
       "editor.theme": "light"
