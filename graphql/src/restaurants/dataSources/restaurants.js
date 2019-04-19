@@ -36,11 +36,12 @@ class RestaurantsAPI extends RESTDataSource {
     }
   }
 
-  async getRestaurantsByLatLng(latitude, longitude) {
+  async getRestaurantsByLatLng(latitude, longitude, page = 1, limit = 10) {
     const response = await this.get("establishments", {
       latitude,
       longitude,
-      pageSize: 10
+      pageNumber: page,
+      pageSize: limit
     })
 
     const results = response.establishments

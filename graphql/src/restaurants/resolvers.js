@@ -1,7 +1,12 @@
 const resolvers = {
   Query: {
-    search: (_, { latitude, longitude }, { dataSources }) =>
-      dataSources.restaurants.getRestaurantsByLatLng(latitude, longitude)
+    search: (_, { latitude, longitude, page, limit }, { dataSources }) =>
+      dataSources.restaurants.getRestaurantsByLatLng(
+        latitude,
+        longitude,
+        page,
+        limit
+      )
   }
 }
 

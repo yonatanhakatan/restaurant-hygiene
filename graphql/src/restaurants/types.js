@@ -3,7 +3,12 @@ import Restaurant from "./types/Restaurant"
 
 const typeDefs = gql`
   type Query {
-    search(latitude: Float!, longitude: Float!): [Restaurant]
+    search(
+      latitude: Float!
+      longitude: Float!
+      page: Int
+      limit: Int
+    ): [Restaurant]
   }
   ${Restaurant}
 `
