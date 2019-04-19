@@ -1,6 +1,4 @@
-const { mergeResolvers } = require("merge-graphql-schemas")
-const RestaurantsResolvers = require("./restaurants/resolvers")
+import { mergeResolvers } from "merge-graphql-schemas"
+import RestaurantsResolvers from "./restaurants/resolvers"
 
-const resolvers = mergeResolvers([RestaurantsResolvers])
-
-module.exports = resolvers
+export default mergeResolvers([RestaurantsResolvers])

@@ -1,5 +1,5 @@
-const { gql } = require("apollo-server-express")
-const Restaurant = require("./types/Restaurant")
+import { gql } from "apollo-server-express"
+import Restaurant from "./types/Restaurant"
 
 const typeDefs = gql`
   type Query {
@@ -8,4 +8,4 @@ const typeDefs = gql`
   ${Restaurant}
 `
 
-module.exports = typeDefs
+export default typeDefs

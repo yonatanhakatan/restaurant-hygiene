@@ -1,6 +1,4 @@
-const { mergeTypes } = require("merge-graphql-schemas")
-const RestaurantsTypes = require("./restaurants/types")
+import { mergeTypes } from "merge-graphql-schemas"
+import RestaurantsTypes from "./restaurants/types"
 
-const types = mergeTypes([RestaurantsTypes])
-
-module.exports = types
+export default mergeTypes([RestaurantsTypes])

@@ -1,4 +1,4 @@
-module.exports = `
+export default `
   type LatLng {
     latitude: String
     longitude: String

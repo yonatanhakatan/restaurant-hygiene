@@ -1,9 +1,10 @@
-const express = require("express")
-const { ApolloServer } = require("apollo-server-express")
+import express from "express"
 
-const typeDefs = require("./src/types")
-const resolvers = require("./src/resolvers")
-const dataSources = require("./src/dataSources")
+import { ApolloServer } from "apollo-server-express"
+
+import typeDefs from "./types"
+import resolvers from "./resolvers"
+import dataSources from "./dataSources"
 
 const port = 4000
 

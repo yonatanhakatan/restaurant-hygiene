@@ -1,5 +1,5 @@
-const RestaurantsDateSource = require("./restaurants/dataSources/restaurants")
+import RestaurantsDataSource from "./restaurants/dataSources/restaurants"
 
-module.exports = () => ({
-  restaurants: new RestaurantsDateSource()
+export default () => ({
+  restaurants: new RestaurantsDataSource()
 })
