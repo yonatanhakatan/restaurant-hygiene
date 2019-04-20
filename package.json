@@ -4,7 +4,7 @@
   "description": "A web app which shows how the restaurants in your area fare in respect to food hygiene.",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint \"**/*.js\"",
+    "lint": "eslint \"graphql/**/*.js\" && cd frontend && npm run lint",
     "graph": "cd graphql && npm start"
   },
   "repository": {
