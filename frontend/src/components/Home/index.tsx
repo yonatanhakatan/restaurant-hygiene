@@ -8,7 +8,7 @@ export default class Home extends PureComponent<Props> {
     super(props)
     LoadGoogleMapsApi({
       libraries: ["places"],
-      key: "GOOGLE_MAPS_PUBLIC_API_KEY"
+      key: "AIzaSyDPS4DMawKvu72-uQnN2QqAyG7Bfps9KXI"
     })
   }
 
