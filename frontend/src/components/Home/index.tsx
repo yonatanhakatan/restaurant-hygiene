@@ -19,7 +19,7 @@ export default class Home extends PureComponent<Props, State> {
     }
     LoadGoogleMapsApi({
       libraries: ["places"],
-      key: "AIzaSyDPS4DMawKvu72-uQnN2QqAyG7Bfps9KXI"
+      key: "PUBLIC_API_KEY"
     }).then(() => {
       this.setState({
         gmapsInitialised: true
