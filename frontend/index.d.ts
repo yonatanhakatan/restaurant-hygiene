@@ -1,2 +1,5 @@
 declare module "react-router-dom"
 declare module "load-google-maps-api"
+declare module "styled-components"
+declare module "*.woff"
+declare module "*.ttf"

@@ -35,9 +35,13 @@ export default class Home extends PureComponent<Props, State> {
 
   render() {
     return (
-      this.state.gmapsInitialised && (
-        <PlacesInput onLatLng={this.handleInputLatLng} />
-      )
+      <>
+        {this.state.gmapsInitialised && (
+          <PlacesInput onLatLng={this.handleInputLatLng} />
+        )}
+        {this.state.latLng &&
+          `${this.state.latLng.lat} ${this.state.latLng.lng}`}
+      </>
     )
   }
 }

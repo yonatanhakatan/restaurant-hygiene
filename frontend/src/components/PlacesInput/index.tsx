@@ -4,6 +4,8 @@ import PlacesAutocomplete, {
   getLatLng
 } from "react-places-autocomplete"
 
+import { Input } from "./styled"
+
 interface Props {
   onLatLng: (latLng: google.maps.LatLngLiteral) => void
 }
@@ -42,7 +44,7 @@ export default class PlacesInput extends PureComponent<Props, State> {
       >
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
-            <input
+            <Input
               {...getInputProps({
                 placeholder: "Search Places ..."
               })}
