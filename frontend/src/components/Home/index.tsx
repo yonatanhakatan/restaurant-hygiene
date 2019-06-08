@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import LoadGoogleMapsApi from "load-google-maps-api"
 
 import PlacesInput from "../PlacesInput"
+import RestaurantMap from "../RestaurantMap"
 
 export default () => {
   const [gmapsInitialised, initialiseGmaps] = useState<boolean>(false)
@@ -24,6 +25,7 @@ export default () => {
     <>
       {gmapsInitialised && <PlacesInput onLatLng={handleInputLatLng} />}
       {latLng && `${latLng.lat} ${latLng.lng}`}
+      <RestaurantMap />
     </>
   )
 }
