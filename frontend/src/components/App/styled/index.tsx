@@ -11,6 +11,10 @@ export const GlobalStyle = createGlobalStyle`
     font-size: 100%;
   }
 
+  body {
+    font-family: "Titillium Web";
+  }
+
   *,
   *:before,
   *:after {

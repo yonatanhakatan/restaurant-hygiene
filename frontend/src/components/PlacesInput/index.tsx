@@ -4,7 +4,7 @@ import PlacesAutocomplete, {
   getLatLng
 } from "react-places-autocomplete"
 
-import { Input } from "./styled"
+import { Input, Item } from "./styled"
 
 interface Props {
   onLatLng: (latLng: google.maps.LatLngLiteral) => void
@@ -42,16 +42,11 @@ export default ({ onLatLng }: Props) => {
           <div>
             {loading && <div>Loading...</div>}
             {suggestions.map(suggestion => {
-              const style = suggestion.active
-                ? { backgroundColor: "#ff0000", cursor: "pointer" }
-                : { backgroundColor: "#ff00ff", cursor: "pointer" }
-              const { key, ...props } = getSuggestionItemProps(suggestion, {
-                style
-              })
+              const { key, ...props } = getSuggestionItemProps(suggestion)
               return (
-                <div key={key} {...props}>
-                  <span>{suggestion.description}</span>
-                </div>
+                <Item key={key} {...props}>
+                  {suggestion.description}
+                </Item>
               )
             })}
           </div>
