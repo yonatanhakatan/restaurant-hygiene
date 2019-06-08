@@ -24,8 +24,7 @@ export default () => {
   return (
     <>
       {gmapsInitialised && <PlacesInput onLatLng={handleInputLatLng} />}
-      {latLng && `${latLng.lat} ${latLng.lng}`}
-      <RestaurantMap />
+      <RestaurantMap centerLatLng={latLng} />
     </>
   )
 }
