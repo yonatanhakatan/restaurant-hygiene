@@ -1,7 +1,9 @@
 import React, { PureComponent } from "react"
 import { BrowserRouter, Route } from "react-router-dom"
+import { ApolloProvider } from "react-apollo"
 
 import Home from "../Home"
+import client from "../../helpers/graphql/client"
 
 import { GlobalStyle } from "./styled"
 
@@ -10,9 +12,11 @@ export default class App extends PureComponent {
     return (
       <>
         <GlobalStyle />
-        <BrowserRouter>
-          <Route exact path="/" component={Home} />
-        </BrowserRouter>
+        <ApolloProvider client={client}>
+          <BrowserRouter>
+            <Route exact path="/" component={Home} />
+          </BrowserRouter>
+        </ApolloProvider>
       </>
     )
   }
