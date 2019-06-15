@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "restaurant-hygiene",
+  "builds": [
+    {
+      "src": "frontend/package.json",
+      "use": "@now/static-build",
+      "config": {
+        "distDir": "frontend/dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "frontend/dist/$1"
+    }
+  ]
+}
