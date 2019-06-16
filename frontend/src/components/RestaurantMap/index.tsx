@@ -8,9 +8,12 @@ interface Props {
 const RestaurantMap = ({ centerLatLng }: Props) => {
   const MapRef = useRef(null)
   useEffect(() => {
-    MapRef.current = ReactMapboxGl({
-      accessToken: "PUBLIC_API_KEY"
-    })
+    const apiKey = process.env.MAPBOX_API_KEY
+    if (apiKey) {
+      MapRef.current = ReactMapboxGl({
+        accessToken: apiKey
+      })
+    }
   }, [])
 
   const { lat = 51.5074, lng = 0.1277 } = centerLatLng || {}

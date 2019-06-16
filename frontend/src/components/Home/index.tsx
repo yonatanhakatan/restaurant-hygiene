@@ -16,12 +16,15 @@ export default withApollo(({ client }: Props) => {
   const [latLng, setLatLng] = useState<google.maps.LatLngLiteral>(null)
 
   useEffect(() => {
-    LoadGoogleMapsApi({
-      libraries: ["places"],
-      key: "PUBLIC_API_KEY"
-    }).then(() => {
-      initialiseGmaps(true)
-    })
+    const apiKey = process.env.GOOGLE_MAPS_API_KEY
+    if (apiKey) {
+      LoadGoogleMapsApi({
+        libraries: ["places"],
+        key: apiKey
+      }).then(() => {
+        initialiseGmaps(true)
+      })
+    }
   }, [])
 
   const search = (searchLatLng: google.maps.LatLngLiteral) => {

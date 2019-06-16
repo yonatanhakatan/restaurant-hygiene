@@ -1,6 +1,7 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const WebpackPwaManifest = require("webpack-pwa-manifest")
 const WorkboxPlugin = require("workbox-webpack-plugin")
+const webpack = require("webpack")
 const path = require("path")
 
 module.exports = {
@@ -12,6 +13,10 @@ module.exports = {
 
   // Enable sourcemaps for debugging webpack's output.
   devtool: "source-map",
+
+  devServer: {
+    writeToDisk: true
+  },
 
   resolve: {
     // Add '.ts' and '.tsx' as resolvable extensions.
@@ -59,6 +64,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "public/index.html",
       filename: "index.html"
+    }),
+    new webpack.EnvironmentPlugin({
+      GOOGLE_MAPS_API_KEY: null,
+      MAPBOX_API_KEY: null
     }),
     new WorkboxPlugin.GenerateSW(),
     new WebpackPwaManifest({

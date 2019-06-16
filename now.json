@@ -15,5 +15,11 @@
       "src": "/(.*)",
       "dest": "frontend/dist/$1"
     }
-  ]
+  ],
+  "build": {
+    "env": {
+      "GOOGLE_MAPS_API_KEY": "@google-maps-api-key",
+      "MAPBOX_API_KEY": "@mapbox-api-key"
+    }
+  }
 }
