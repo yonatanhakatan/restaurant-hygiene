@@ -8,9 +8,17 @@
       "config": {
         "distDir": "frontend/dist"
       }
+    },
+    {
+      "src": "graphql/dist/index.js",
+      "use": "@now/node"
     }
   ],
   "routes": [
+    {
+      "src": "/graphql",
+      "dest": "graphql/dist"
+    },
     {
       "src": "/(.*)",
       "dest": "frontend/dist/$1"
